@@ -2,6 +2,14 @@ $( document ).ready(function(){
 	$( ".modalPopupArea" ).load( "templates/playerpopup.html" );
 	$('#countdown-clock').countdownClock({date: '2016-08-05'});
 	var data;
+		if(sessionStorage.events_count){		
+		console.log("already exists")		
+		sessionStorage.setItem("events_count",0)		
+	}		
+	else{		
+		sessionStorage.setItem("events_count",1);		
+		console.log(sessionStorage.events_count);		
+	}	
 	var suggestion_array=[];
     	$.ajax({
 		url: 'data/data.json', 

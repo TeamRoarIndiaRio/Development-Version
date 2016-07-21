@@ -4,6 +4,10 @@ $(document).ready(function(){
 	$( "header#header" ).load( "templates/header.html" );
 	$( "footer#footer" ).load( "templates/footer.html" );
 	$( ".modalPopupArea" ).load( "templates/playerpopup.html" );
+		if(sessionStorage.getItem("events_count") == 1){		
+		$("<div class='overlay'><div class='loadpopup'>Click on any player to Read more!</div></div>").appendTo($(".dummy"));		
+		setTimeout(function(){ $(".overlay").fadeOut(1000) }, 1000);		
+	}		
 
 	//function to read url params
 	function GetURLParameter(sParam) {

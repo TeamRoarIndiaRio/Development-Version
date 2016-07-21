@@ -71,7 +71,7 @@
     font-size: 18px;
 }
 .input-div{
-    padding: 12px;
+    padding: 12px 0;
 }
 .input-div input{
 	width: 55%;
@@ -86,7 +86,7 @@
     background-size: 17px;
     background-repeat: no-repeat;
     background-position: 95% 10px;
-    margin: 11px 0 0 80px;
+    margin: 11px 0 0 75px;
 }
 .input-div button{
     display: inline-block;
@@ -321,7 +321,7 @@ margin-left: 45px !important;
         margin-left: 30px !important;
     }
     .input-div button{
-        margin-right: 0px;
+        margin-right: 10px;
     }
     .landing-tab-portrait-align{width:4.33% !important;}
     .landing-tab-offset{margin-left: 8.33333333%;}
