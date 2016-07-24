@@ -1,9 +1,9 @@
 'use strict'
 $(document).ready(function(){
 	//load header and footer
-	$( "header#header" ).load( "templates/header.html" );
-	$( "footer#footer" ).load( "templates/footer.html" );
-	$( ".modalPopupArea" ).load( "templates/playerpopup.html" );
+	$( "header#header" ).load( "https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/templates/header.html" );
+	$( "footer#footer" ).load( "https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/templates/footer.html" );
+	$( ".modalPopupArea" ).load( "https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/templates/playerpopup.html" );
 		if(sessionStorage.getItem("events_count") == 1){		
 		$("<div class='overlay'><div class='loadpopup'>Click on any player to Read more!</div></div>").appendTo($(".dummy"));		
 		setTimeout(function(){ $(".overlay").fadeOut(1000) }, 1000);		
@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$('#wrap h2').text(eventSelected).css('text-transform','uppercase');
 	//load data
 	$.ajax({
-		url: 'data/' + eventSelected + '_json.json', 
+		url: 'https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/data/' + eventSelected + '_json.json', 
 		type: 'GET',
 		dataType: 'json'
 	}).success(function(data) {
@@ -73,7 +73,7 @@ $(document).ready(function(){
 						var playerDisplay = [
 							"<div class='col-lg-5 col-md-5 col-sm-5 col-xs-5'>",
 								"<div class='playerImage-wrap col-lg-5 col-md-5 col-sm-5'>",
-									"<img class = 'playerImage' alt='" + data.name + "' src='assets/" + data.image + "' title='" + data.name + "'>",
+									"<img class = 'playerImage' alt='" + data.name + "' src='https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/" + data.image + "' title='" + data.name + "'>",
 								"</div>",
 								"<div class='playerDetails col-lg-5 col-md-5 col-sm-5'>",
 									"<p><a href='javascript:void(0);'>" +data.name+ "</a></p>",
@@ -100,7 +100,7 @@ $(document).ready(function(){
 		    $.each(data,function(i,data){
 	      		if(data.name.toLowerCase() == e.target.innerHTML.toLowerCase()){
 					$('#exampleModal').modal('show')
-	      			$(".player-details img").attr("src", 'assets/' + data.image);
+	      			$(".player-details img").attr("src", 'https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/' + data.image);
 	      			//sakthi change
 	      			if(data.fb != ""){
 	      			$(".fb-profile a").attr({"href": data.fb,"target":"_BLANK"}).removeClass("link-disable");
@@ -130,9 +130,9 @@ $(document).ready(function(){
 	      			for(var j=0;j<data.achievements.length; j++){
 	      				$("<p>" + data.achievements[j] + "</p>").appendTo(".player_achievements");
 	      			}
-	      			$(".fb-profile img").attr("src","../../assets/images/facebook.png");
-	      			$(".twitter-profile img").attr("src","../../assets/images/twitter.png");
-	      			$(".wiki-link img").attr("src","../../assets/images/wiki.png");
+	      			$(".fb-profile img").attr("src","https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/images/facebook.png");
+	      			$(".twitter-profile img").attr("src","https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/images/twitter.png");
+	      			$(".wiki-link img").attr("src","https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/images/wiki.png");
 	      			// $("<p><a href='" + data.wikiLink + "'>Wikipedia Link</a></p>").appendTo(".player_wiki");
 	      			// $("<p><a href='" + data.fb + "'>Facebook Link</a></p>").appendTo(".player_fb");
 	      			// $("<p><a href='" + data.twitter + "'>Twitter Link</a></p>").appendTo(".player_twitter");

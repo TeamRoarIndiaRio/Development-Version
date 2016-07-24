@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-	$( ".modalPopupArea" ).load( "templates/playerpopup.html" );
+	$( ".modalPopupArea" ).load( "https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/templates/playerpopup.html" );
 	$('#countdown-clock').countdownClock({date: '2016-08-05'});
 	var data;
 		if(sessionStorage.events_count){		
@@ -12,7 +12,7 @@ $( document ).ready(function(){
 	}	
 	var suggestion_array=[];
     	$.ajax({
-		url: 'data/data.json', 
+		url: 'https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/data/data.json', 
 		type: 'GET',
 		dataType: 'json'
 	}).success(function(data1) {
