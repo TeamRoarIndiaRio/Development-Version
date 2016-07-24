@@ -36,7 +36,7 @@ $( document ).ready(function(){
 		      	$.each(data,function(i,data){
 		      		if(data.name.toLowerCase() == search_field){
 						$('#exampleModal').modal('show')
-		      			$(".player-details img").attr("src", "assets/" + data.image);
+		      			$(".player-details img").attr("src", "https://cdn.rawgit.com/TeamRoarIndiaRio/rio/gh-pages/assets/" + data.image);
 		      			$('#exampleModalLabel').html(data.name)
 		      			$("<p>" + data.name + "</p>").appendTo(".player_name");
 		      			$("<p>" + data.dob + "</p>").appendTo(".player_dob");
