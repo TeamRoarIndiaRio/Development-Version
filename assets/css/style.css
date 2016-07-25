@@ -1,6 +1,10 @@
 .wrapper{
 	width: 100%;
 }
+.kot-wrapper{
+    overflow: auto;
+    margin: 0 auto 20px auto;
+}
 @font-face {
     font-family: oswald;
     src: url(../fonts/Oswald-Regular.ttf);
@@ -451,7 +455,7 @@ margin-left: 45px !important;
 @media (min-width: 1300px){
     div.kot-wrapper{
         width: 1300px;
-        margin: 0 auto !important;
+        margin: 0 auto 20px auto !important;
         float: none;
     }
 }
